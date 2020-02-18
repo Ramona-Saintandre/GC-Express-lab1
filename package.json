@@ -16,9 +16,10 @@
     "url": "https://github.com/Ramona-Saintandre/GC-Express-lab1/issues"
   },
   "homepage": "https://github.com/Ramona-Saintandre/GC-Express-lab1#readme",
+  "type": "module",
   "dependencies": {
     "express": "^4.17.1",
     "typescript": "^3.7.5",
-    "type":"module"
+    "update": "^0.7.4"
   }
 }
