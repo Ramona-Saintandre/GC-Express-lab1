@@ -43,7 +43,7 @@ cartItems.get('/cartItems.js:id', cors(corsOptions),function (req,res){
 // add a cart item to the array using the json body of the request , generate a unique id for that ID
 // status code 201 
 cartItems.post('/cartItems.js/:id', cors(corsOptions), function (req,res){
-    // missing something here ?
+    // missing something here ? need to find out what you use to add to the array
     console.log(reg.body); //data being extracted from the URL      
 res.send("Add items to the cart ..")
 res.status(201); // created
@@ -63,8 +63,9 @@ cartItems.put(" '/cartItems.js/:id", cors(corsOptions),function (req,res){
 
 // remove the item from the array that has the given id 
 // response status 204
-cartItems.delete('/cartItems.js/:id', function (req,res){
+cartItems.delete('/cartItems.js/:id', cors(corsOptions), function (req,res){
     // need to do a splice here to remove items from the array, I think 
+    cartItems.splice(index, -1); //remove an item from the cart, not sure about the -1
    console.log(req.params.id);  //URL parameters 
     res.send ("Delete items from the cart .. ");
     res.status(204) //no content
