@@ -54,7 +54,7 @@ res.status(201);
 //  response 200
 
 cartItems.put(" '/cartItems.js/:id", function (req,res){
-    
+
     console.log(req.params.id);  //URL paramaters
     res.send("Update items in the cart ..")
     res.status(200);
@@ -63,10 +63,13 @@ cartItems.put(" '/cartItems.js/:id", function (req,res){
 
 // remove the item from the array that has the given id 
 // response status 204
-cartItems.delete()
-return
-Response
-res.status(204)
+cartItems.delete('/cartItems.js/:id', function (req,res){
+    // need to do a splice here to remove items from the array, I think 
+   console.log(req.params.id);  //URL parameters 
+    res.send ("Delete items from the cart .. ");
+    res.status(204)
+})
+
 
 
 // update the cart item in the array that has the given id , use the JSON body 
