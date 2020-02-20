@@ -15,6 +15,33 @@ app.use (express.json());
 
 app.use('/', __dirname,cart-items);
 
+
+// Endpoints 
+
+// get json array of all items in the cart-items
+//  status code 200
+
+app.get ('/cart-items', function (req,res){
+    return res.json(cartList);
+    Response.send([]);
+    res.status(200);//ok
+});
+
+// get json response of :id
+// status code 200 
+app.get('/cart-items', function (req,res){
+    return res.json(cart-items,id);
+    Response.send()
+    res.status(200); //ok
+});
+
+// add a cart item to the array using the json body of the request , generate a unique id for that ID
+// status code 201 
+
+app.post()
+
+// update the cart item in the array that has the given id , use the JSON body 
+
 // run the server
 app.listen(port, () => console.log(`Listening on port: ${port}.`));
 console.log('Listening at http://localhost:8080/cart-items...');
