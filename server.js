@@ -43,10 +43,10 @@ cartItems.get('/cartItems.js:id', function (req,res){
 // add a cart item to the array using the json body of the request , generate a unique id for that ID
 // status code 201 
 cartItems.post('/cartItems.js/:id', function (req,res){
-    // missing something here 
+    // missing something here ?
     console.log(reg.body); //data being extracted from the URL      
-Res.send("Add items to the cart ..")
-res.status(201);
+res.send("Add items to the cart ..")
+res.status(201); // created
 })
 
 
@@ -54,10 +54,10 @@ res.status(201);
 //  response 200
 
 cartItems.put(" '/cartItems.js/:id", function (req,res){
-
+// missing something here ?
     console.log(req.params.id);  //URL paramaters
     res.send("Update items in the cart ..")
-    res.status(200);
+    res.status(200); //ok
 })
 
 
@@ -67,14 +67,12 @@ cartItems.delete('/cartItems.js/:id', function (req,res){
     // need to do a splice here to remove items from the array, I think 
    console.log(req.params.id);  //URL parameters 
     res.send ("Delete items from the cart .. ");
-    res.status(204)
+    res.status(204) //no content
 })
 
-
-
 // update the cart item in the array that has the given id , use the JSON body 
-
 // run the server
+
 cartItems.listen(port, () => console.log(`Listening on port: ${port}.`));
 console.log('Listening at http://localhost:8080/cart-items...');
 
