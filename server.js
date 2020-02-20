@@ -27,7 +27,7 @@ app.get ('/cartItems',  function (req,res){
     // req is declared but never used error message, need to find out what this means 
     // https://flaviocopes.com/express-request-parameters/
     res.status(200);//ok
-    console.log(reg.body);
+    console.log(req.body);
    res.json(cartList);
     // res.send(cartItems); // this is a variable in cartItems, but not being read not sure why , to many issues not enough time
     
@@ -36,7 +36,7 @@ app.get ('/cartItems',  function (req,res){
 // get json response of :id
 // status code 200 
 app.get('/cartItems/:id',function (req,res){
-    console.log(reg.body); //data being extracted from the URL
+    console.log(req.body); //data being extracted from the URL
     res.status(200); //ok
     return res.json(cart-items,id[req.params.index]); // need to get stuff from the array 
     res.send("get ID for item in the cart.." + req.params.id);
@@ -48,7 +48,7 @@ app.get('/cartItems/:id',function (req,res){
 app.post('/cartItems/:id', function (req,res){
     // missing something here ? need to find out what you use to add to the array
     res.status(201); // created
-    console.log(reg.body); //data being extracted from the URL      
+    console.log(req.body); //data being extracted from the URL      
 res.send("Add items to the cart ..")
 
 })
