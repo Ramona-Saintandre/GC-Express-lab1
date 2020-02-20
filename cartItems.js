@@ -1,3 +1,5 @@
+const express = require("express");
+
 const cartList = [
     {
         id:1,
@@ -30,4 +32,4 @@ id:1,
     quantity:2,
 }];
 
-module.exports = { " cartItems "}
+module.exports = cartItems;
