@@ -1,6 +1,7 @@
 // require the Express module
 const express = require("express");
-const express = require("cart-items");
+const express = require("cartItems");
+const cartItems = require('express-router')
 
 // creates an instance of an Express server this is referencing the const express
 const app = express();
