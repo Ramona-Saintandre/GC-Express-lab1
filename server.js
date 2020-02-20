@@ -37,8 +37,26 @@ app.get('/cart-items', function (req,res){
 
 // add a cart item to the array using the json body of the request , generate a unique id for that ID
 // status code 201 
-
 app.post()
+return
+Response.send
+res.status(201)
+
+// update the cart in the that has a unique id, use JSON body as the new porperty
+//  response 200
+
+app.put()
+return
+Response.send
+res.status(200)
+
+// remove the item from the array that has the given id 
+// response status 204
+app.delete()
+return
+Response
+res.status(204)
+
 
 // update the cart item in the array that has the given id , use the JSON body 
 
