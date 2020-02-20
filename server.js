@@ -33,27 +33,33 @@ cartItems.get ('/cart-items', function (req,res){
 
 // get json response of :id
 // status code 200 
-cartItems.get('/cart-items/:id', function (req,res){
-    console.log(reg.body);
+cartItems.get('/cartItems.js:id', function (req,res){
+    console.log(reg.body); //data being extracted from the URL
     return res.json(cart-items,id);
-    res.send("get IDfor item in the cart + req.params.id");
+    res.send("get ID for item in the cart.." + req.params.id);
     res.status(200); //ok
 });
 
 // add a cart item to the array using the json body of the request , generate a unique id for that ID
 // status code 201 
-cartItems.post()
-return
-Response.send
-res.status(201)
+cartItems.post('/cartItems.js/:id', function (req,res){
+    // missing something here 
+    console.log(reg.body); //data being extracted from the URL      
+Res.send("Add items to the cart ..")
+res.status(201);
+})
+
 
 // update the cart in the that has a unique id, use JSON body as the new porperty
 //  response 200
 
-cartItems.put()
-return
-Response.send
-res.status(200)
+cartItems.put(" '/cartItems.js/:id", function (req,res){
+    
+    console.log(req.params.id);  //URL paramaters
+    res.send("Update items in the cart ..")
+    res.status(200);
+})
+
 
 // remove the item from the array that has the given id 
 // response status 204
