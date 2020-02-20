@@ -22,53 +22,58 @@ app.use('/', __dirname,cartItems);
 // get json array of all items in the cart-items
 //  status code 200
 
-app.get ('/cart-items', cors(corsOptions), function (req,res){
+app.get ('/cartItems', cors(corsOptions), function (req,res){
     // req is declared but never used error message, need to find out what this means 
     // https://flaviocopes.com/express-request-parameters/
-    console.log(reg.body);
-    return res.json(cartList);
-    res.send(cartItems); // this is a variable in cartItems, but not being read not sure why , to many issues not enough time
     res.status(200);//ok
+    console.log(reg.body);
+   res.json(cartList);
+    // res.send(cartItems); // this is a variable in cartItems, but not being read not sure why , to many issues not enough time
+    
 });
 
 // get json response of :id
 // status code 200 
-app.get('/cartItems.js:id', cors(corsOptions),function (req,res){
+app.get('/cartItems/:id', cors(corsOptions),function (req,res){
     console.log(reg.body); //data being extracted from the URL
+    res.status(200); //ok
     return res.json(cart-items,id[req.params.index]); // need to get stuff from the array 
     res.send("get ID for item in the cart.." + req.params.id);
-    res.status(200); //ok
+   
 });
 
 // add a cart item to the array using the json body of the request , generate a unique id for that ID
 // status code 201 
-app.post('/cartItems.js/:id', cors(corsOptions), function (req,res){
+app.post('/cartItems/:id', cors(corsOptions), function (req,res){
     // missing something here ? need to find out what you use to add to the array
+    res.status(201); // created
     console.log(reg.body); //data being extracted from the URL      
 res.send("Add items to the cart ..")
-res.status(201); // created
+
 })
 
 
 // update the cart in the that has a unique id, use JSON body as the new porperty
 //  response 200
 
-app.put(" '/cartItems.js/:id", cors(corsOptions),function (req,res){
-// missing something here ? need push to add item from the array 
+app.put("/cartItems/:id", cors(corsOptions),function (req,res){
+// missing something here ? need push to add item from the array
+res.status(200); //ok 
     console.log(req.params.id);  //URL paramaters
-    res.send("Update items in the cart ..")
-    res.status(200); //ok
+    res.send("Update items in the cart ..");
+
 })
 
 
 // remove the item from the array that has the given id 
 // response status 204
-app.delete('/cartItems.js/:id', cors(corsOptions), function (req,res){
+app.delete('/cartItems/:id', cors(corsOptions), function (req,res){
     // need to do a splice here to remove items from the array, I think 
-    cartItems.splice(index, -1); //remove an item from the cart, not sure about the -1
+    res.status(204) //no content
+    cartItems.splice(index, 1); //remove an item from the cart, not sure about the -1
    console.log(req.params.id);  //URL parameters 
     res.send ("Delete items from the cart .. ");
-    res.status(204) //no content
+    
 })
 
 // update the cart item in the array that has the given id , use the JSON body 
