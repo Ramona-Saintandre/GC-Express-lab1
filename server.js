@@ -27,15 +27,16 @@ cartItems.get ('/cart-items', function (req,res){
     // https://flaviocopes.com/express-request-parameters/
     console.log(reg.body);
     return res.json(cartList);
-    Response.send(cartItems);
+    res.send(cartItems);
     res.status(200);//ok
 });
 
 // get json response of :id
 // status code 200 
 cartItems.get('/cart-items/:id', function (req,res){
+    console.log(reg.body);
     return res.json(cart-items,id);
-    Response.send()
+    res.send("get IDfor item in the cart + req.params.id");
     res.status(200); //ok
 });
 
