@@ -1,6 +1,6 @@
-const express = require("express");
 
-const cartList = [
+
+const cartItems = [
     {
         id:1,
     product:"milk",
