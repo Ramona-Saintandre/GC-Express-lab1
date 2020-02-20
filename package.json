@@ -16,7 +16,7 @@
     "url": "https://github.com/Ramona-Saintandre/GC-Express-lab1/issues"
   },
   "homepage": "https://github.com/Ramona-Saintandre/GC-Express-lab1#readme",
-  "type": "module",
+  
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
