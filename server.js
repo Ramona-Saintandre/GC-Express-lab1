@@ -27,7 +27,7 @@ cartItems.get ('/cart-items', function (req,res){
     // https://flaviocopes.com/express-request-parameters/
     console.log(reg.body);
     return res.json(cartList);
-    res.send(cartItems);
+    res.send(cartItems); // this is a variable in cartItems, but not being read not sure why , to many issues not enough time
     res.status(200);//ok
 });
 
