@@ -23,14 +23,17 @@ app.use('/', __dirname,cartItems);
 //  status code 200
 
 cartItems.get ('/cart-items', function (req,res){
+    // req is declared but never used error message, need to find out what this means 
+    // https://flaviocopes.com/express-request-parameters/
+    console.log(reg.body);
     return res.json(cartList);
-    Response.send([]);
+    Response.send(cartItems);
     res.status(200);//ok
 });
 
 // get json response of :id
 // status code 200 
-cartItems.get('/cart-items', function (req,res){
+cartItems.get('/cart-items/:id', function (req,res){
     return res.json(cart-items,id);
     Response.send()
     res.status(200); //ok
