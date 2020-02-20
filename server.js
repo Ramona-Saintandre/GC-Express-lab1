@@ -13,7 +13,7 @@ app.use (express.json());
 
 // request 
 
-app.use('/', __dirname,cart-items);
+app.use('/', __dirname,cartItems);
 
 
 // Endpoints 
@@ -21,7 +21,7 @@ app.use('/', __dirname,cart-items);
 // get json array of all items in the cart-items
 //  status code 200
 
-app.get ('/cart-items', function (req,res){
+cartItems.get ('/cart-items', function (req,res){
     return res.json(cartList);
     Response.send([]);
     res.status(200);//ok
@@ -29,7 +29,7 @@ app.get ('/cart-items', function (req,res){
 
 // get json response of :id
 // status code 200 
-app.get('/cart-items', function (req,res){
+cartItems.get('/cart-items', function (req,res){
     return res.json(cart-items,id);
     Response.send()
     res.status(200); //ok
@@ -37,7 +37,7 @@ app.get('/cart-items', function (req,res){
 
 // add a cart item to the array using the json body of the request , generate a unique id for that ID
 // status code 201 
-app.post()
+cartItems.post()
 return
 Response.send
 res.status(201)
@@ -45,14 +45,14 @@ res.status(201)
 // update the cart in the that has a unique id, use JSON body as the new porperty
 //  response 200
 
-app.put()
+cartItems.put()
 return
 Response.send
 res.status(200)
 
 // remove the item from the array that has the given id 
 // response status 204
-app.delete()
+cartItems.delete()
 return
 Response
 res.status(204)
@@ -61,6 +61,6 @@ res.status(204)
 // update the cart item in the array that has the given id , use the JSON body 
 
 // run the server
-app.listen(port, () => console.log(`Listening on port: ${port}.`));
+cartItems.listen(port, () => console.log(`Listening on port: ${port}.`));
 console.log('Listening at http://localhost:8080/cart-items...');
 
