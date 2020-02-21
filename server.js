@@ -45,7 +45,7 @@ app.get('/cartItems/:id',function (req,res){
 
 // add a cart item to the array using the json body of the request , generate a unique id for that ID
 // status code 201 
-app.post('/cartItems/:id', function (req,res){
+app.post('/cartItems', function (req,res){
     // missing something here ? need to find out what you use to add to the array
     cartItems.push(req.body);
     res.status(201); // created
@@ -72,7 +72,7 @@ res.status(200); //ok
 
 // remove the item from the array that has the given id 
 // response status 204
-app.delete('/cartItems/:id',  function (req,res){
+app.delete('/cartItems',  function (req,res){
     // need to do a splice here to remove items from the array, I think 
     res.status(204) //no content
     cartItems.splice(req.params.id , 1); //remove an item from the cart, not sure about the -1
