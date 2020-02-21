@@ -72,7 +72,7 @@ res.status(200); //ok
 
 // remove the item from the array that has the given id 
 // response status 204
-app.delete('/cartItems',  function (req,res){
+app.delete('/cartItems/:id',  function (req,res){
     // need to do a splice here to remove items from the array, I think 
     res.status(204) //no content
     cartItems.splice(req.params.id , 1); //remove an item from the cart, not sure about the -1
