@@ -47,10 +47,10 @@ app.get('/cartItems/:id',function (req,res){
 // status code 201 
 app.post('/cartItems/:id', function (req,res){
     // missing something here ? need to find out what you use to add to the array
-    cartItems.push(req.body)
+    cartItems.push(req.body);
     res.status(201); // created
     console.log(req.body); //data being extracted from the URL      
-res.send("Add items to the cart ..")
+res.send("Add items to the cart ..");
 
 })
 
@@ -60,9 +60,11 @@ res.send("Add items to the cart ..")
 
 app.put("/cartItems/:id", function (req,res){
     // need to research something to find an array index
+    cartItems.splice(req.body);
 // missing something here ? need push to add item from the array
 res.status(200); //ok 
     console.log(req.params.id);  //URL paramaters
+    console.log([0, 1, 2, 3, 4].findIndex(cartItems));
     res.send("Update items in the cart ..");
 
 })
