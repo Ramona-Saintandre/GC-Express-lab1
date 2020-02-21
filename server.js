@@ -76,6 +76,7 @@ app.delete('/cartItems/:id',  function (req,res){
     // need to do a splice here to remove items from the array, I think 
     res.status(204) //no content
     cartItems.splice(req.params.id , 1); //remove an item from the cart, not sure about the -1
+    console.log([0, 1, 2, 3, 4].findIndex(cartItems));
 //    console.log(req.params.id);  //URL parameters 
     res.send ("Delete items from the cart .. ");
     
