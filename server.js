@@ -28,7 +28,7 @@ app.get ('/cartItems',  function (req,res){
     // https://flaviocopes.com/express-request-parameters/
     res.status(200);//ok
     console.log(req.body);
-   res.json(cartList);
+   res.json(cartItems);
     // res.send(cartItems); // this is a variable in cartItems, but not being read not sure why , to many issues not enough time
     
 });
@@ -47,6 +47,7 @@ app.get('/cartItems/:id',function (req,res){
 // status code 201 
 app.post('/cartItems/:id', function (req,res){
     // missing something here ? need to find out what you use to add to the array
+    cartItems.push(req.body)
     res.status(201); // created
     console.log(req.body); //data being extracted from the URL      
 res.send("Add items to the cart ..")
@@ -58,6 +59,7 @@ res.send("Add items to the cart ..")
 //  response 200
 
 app.put("/cartItems/:id", function (req,res){
+    // need to research something to find an array index
 // missing something here ? need push to add item from the array
 res.status(200); //ok 
     console.log(req.params.id);  //URL paramaters
